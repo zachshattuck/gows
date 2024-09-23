@@ -33,6 +33,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	buf := make([]byte, 4096)
+
 	// Will `Read` from the connection and send a `101 Switching Protocols` response
 	// if valid, otherwise sends a `400 Bad Request` response.
 	err := gows.UpgradeConnection(&conn, buf)
