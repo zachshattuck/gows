@@ -1,13 +1,14 @@
 # `gows`
-Simple WebSocket ([RFC6455](https://datatracker.ietf.org/doc/rfc6455/)) library in Go
+Barebones WebSocket ([RFC6455](https://datatracker.ietf.org/doc/rfc6455/)) library in Go
 
 **What it offers:**
 - Simple way to upgrade an HTTP connection to a WebSocket connection
-- Simple way to serialize and deserialize individual WebSocket frames
+- Functions to serialize and deserialize individual WebSocket frames
 
 **What it doesn't do:**
 - Doesn't handle message fragmentation, but you can do that yourself by reading `Fin` and `Opcode`. For more information, see section 5.4 of [RFC6455](https://datatracker.ietf.org/doc/rfc6455/)
-- Doesn't automatically respond to PING frames.
+- Doesn't automatically respond to PING frames
+- Doesn't really offer an opinion on how to handle opcodes or other flags at all
 
 ## Installation
 `go get github.com/zachshattuck/gows`
